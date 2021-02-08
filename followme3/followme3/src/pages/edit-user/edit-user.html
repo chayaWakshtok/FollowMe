@@ -1,0 +1,57 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>עריכת פרטי {{nameUser}} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="profile-image-wrapper" (click)="takePicture()">
+        <div class="profile-image-placeholder" *ngIf="!user.Image">
+          <ion-icon name="add"></ion-icon>
+          <div>
+            הוסף תמונה
+          </div>
+        </div>
+        <div class="profile-image"  *ngIf="user.Image"  [style.backgroundImage]="user.Image"></div>
+      </div>
+    <!-- ="getProfileImageStyle()" -->
+      <div class="login-box">
+        <form (ngSubmit)="updateUser()" #registerForm="ngForm" class="list-form">
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+              מייל
+            </ion-label>
+            <ion-input class="item-labe" type="email" #email="ngModel" name="email" [(ngModel)]="user.Email" required></ion-input>
+            <div type="text" class="text text-danger" *ngIf="!email.valid && email.touched">שדה זה חובה</div><br />
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="person" item-start class="text-primary"></ion-icon>
+              שם פרטי
+            </ion-label>
+            <ion-input class="item-labe" type="text" #firstName="ngModel" name="firstName" [(ngModel)]="user.FirstName" required></ion-input>
+            <div type="text" class="text text-danger" *ngIf="!firstName.valid && firstName.touched">שדה זה חובה</div><br />
+          </ion-item>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="person" item-start class="text-primary"></ion-icon>
+              שם משפחה
+            </ion-label>
+            <ion-input class="item-labe" type="text" name="lastName" #lastName="ngModel" [(ngModel)]="user.LastName" required></ion-input>
+            <div type="text" class="text text-danger" *ngIf="!lastName.valid && lastName.touched">שדה זה חובה</div><br />
+          </ion-item>
+    
+    
+          <div margin-top>
+            <button ion-button block icon-start color="dark" tappable type="submit" [disabled]="!registerForm.form.valid"><ion-icon name="save"></ion-icon>שמור</button>
+          </div>
+        </form>
+      </div>
+    
+</ion-content>

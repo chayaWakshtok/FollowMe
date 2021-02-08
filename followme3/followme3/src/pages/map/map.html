@@ -1,0 +1,26 @@
+<!--
+  Generated template for the MapPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon> 
+    </button>
+    <ion-title>מפת קבוצה {{group.Name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content class="map" padding >
+    <div #map id="map"></div>
+    <div style="color:white"><p style="font-size:20px">מפת צבעים:</p>
+      <p ><b style="color:red">אדום: </b>רחוק ממנהלי הקבוצה</p>
+      <p><b style="color:orange">כתום: </b>קרוב להתרחקות ממנהלי הקבוצה</p>
+      <p><b style="color:greenyellow">ירוק: </b>מרחק תקין ממנהלי הקבוצה</p>
+      <p><b style="color:yellow">צהוב: </b>מנהל פעיל</p>
+      <p><b style="color:grey">אפור: </b>מנהל שלא נוכח בטיול ומטייל לא פעיל</p>
+    </div>
+</ion-content>

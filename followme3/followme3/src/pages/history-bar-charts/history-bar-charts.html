@@ -1,0 +1,44 @@
+<!--
+  Generated template for the HistoryBarChartsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="width">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>דיאגרמת מקלות</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div>
+      <ion-item>
+          <ion-label>פילוג לפי:</ion-label>
+          <ion-select >
+            <ion-option value="month">לפי החודש הנוכחי</ion-option>
+            <ion-option value="year">לפי השנה הנוכחית</ion-option>
+          </ion-select>
+        </ion-item>
+  </div>
+  <div>
+    <div style="display: block;margin-top: 118px;">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+  <p>דיאגרמות שונות</p>
+  <button class="margin" color="dark" ion-button (click)="history()"><ion-icon name="person-add"></ion-icon>גרפיים</button>
+  <button color="dark" ion-button (click)="historyLine()"><ion-icon name="person-add"></ion-icon>מקלות </button>
+  <button color="dark" ion-button (click)="historyDougt()"><ion-icon name="person-add"></ion-icon>עוגה</button>
+</ion-content>

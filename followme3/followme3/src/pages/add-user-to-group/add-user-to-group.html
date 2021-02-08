@@ -1,0 +1,50 @@
+<!--
+  Generated template for the AddUserToGroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>הוספת מטילים לקבוצה</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <ion-list *ngIf="users">
+
+      <ion-item-sliding  *ngFor="let u of users">
+          <!-- <ion-avatar item-left>
+              <img src="{{c.flag}}">
+            </ion-avatar> -->
+      <ion-item  ><span>{{u.FirstName}}  {{u.LastName}}</span></ion-item>
+    
+    <ion-item-options>
+        <button danger (click)="removeItem(u)"><ion-icon name="trash"></ion-icon> מחיקה</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+   <!-- <input list="browsers" name="browser">
+    <div *ngIf="allUsers">
+      <datalist name="dada" id="browsers" [(ngModel)]="selectedUser" (click)="addToGroup(us)"  ngDefaultControl>
+        <option *ngFor="let us of allUsers" [ngValue]="us" name="us">{{us.firstName}}  {{us.lastName}}</option>
+        
+      </datalist>
+      </div>  -->
+<p>------------------------------------------</p>
+      <ion-list *ngIf="allUsers">
+
+        <ion-item *ngFor="let us of allUsers" (click)="addToGroup(us)">
+            {{us.FirstName}}  {{us.LastName}}
+        </ion-item>
+      </ion-list>
+<button ion-button (click)="saveUser()">שמור </button>
+</ion-content>
+
+

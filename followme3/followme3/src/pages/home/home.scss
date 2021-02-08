@@ -1,0 +1,26 @@
+page-home {
+background-color: darkblue !important;
+
+.width{
+    min-height: 60px !important;
+}
+
+.wordsLogo{
+    width: 323px;
+    margin-right: 2%;
+}
+.markerLogo{
+ 
+    margin-top: 33%; 
+   
+}
+@keyframes jump {
+    0%   {transform: translate3d(0,0,0) ;}
+    40%  {transform: translate3d(0,5%,0) ;}
+    100% {transform: translate3d(0,10%,0) ;}
+  }
+  .jump {
+    transform-origin: 10%;
+    animation: jump .9s linear alternate infinite;
+  }
+}

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QualiAPI.Controllers.GroupController">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAEAAABQAAAAAACAACQQAAAAAEAAAAAJAAAAEAAAAA=</HashCode>
+      <FileName>Controllers\GroupController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Controllers.ManagmentController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQ=</HashCode>
+      <FileName>Controllers\ManagmentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Controllers.UserController">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="QualiAPI.Controllers.UserController.help" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\UserController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAACAAQAAAAAAAAIQAAAAEAAAAAEAAAAAAAAAAAg=</HashCode>
+      <FileName>Controllers\UserController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Controllers.RegisterController">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="register" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAARAAAAA=</HashCode>
+      <FileName>Controllers\RegisterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

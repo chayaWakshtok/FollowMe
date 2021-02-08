@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar color="" class="width">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>קבוצה חדשה</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding dir="rtl">
+
+    <form class="form" [formGroup]="validations_form"  (ngSubmit)="onSubmit(validations_form.value)">
+      <ion-item>
+        <ion-label floating > <ion-icon name="contacts" item-start class="text-primary"></ion-icon>שם קבוצה</ion-label>
+        <ion-input type="text" formControlName="username" class="form-controll" required clearInput=true ></ion-input>
+      </ion-item>
+
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.username">
+          <div class="error-message" *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <div formGroupName="matching_passwords">
+        <ion-item>
+          <ion-label floating > <ion-icon name="key" item-start class="text-primary"></ion-icon>סיסמת קבוצה</ion-label>
+          <ion-input type="password" formControlName="password" clearInput=true></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div class="error-message" *ngIf="validations_form.get('matching_passwords').get('password').hasError(validation.type) && (validations_form.get('matching_passwords').get('password').dirty || validations_form.get('matching_passwords').get('password').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label floating > <ion-icon name="key" item-start class="text-primary"></ion-icon>אישור סיסמה</ion-label>
+          <ion-input type="password" formControlName="confirm_password" clearInput=true></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.confirm_password">
+            <div class="error-message" *ngIf="validations_form.get('matching_passwords').get('confirm_password').hasError(validation.type) && (validations_form.get('matching_passwords').get('confirm_password').dirty || validations_form.get('matching_passwords').get('confirm_password').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+         
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.matching_passwords">
+          <div class="error-message" *ngIf="validations_form.get('matching_passwords').hasError(validation.type) && (validations_form.get('matching_passwords').get('confirm_password').dirty || validations_form.get('matching_passwords').get('confirm_password').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+           
+    <ion-item>
+      <ion-label floating > <ion-icon name="create" item-start class="text-primary"></ion-icon>תיאור טיול</ion-label>
+      <ion-input type="text"  formControlName="trip_description" clearInput=true></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating > <ion-icon name="calendar" item-start class="text-primary"></ion-icon>תאריך תחילת טיול</ion-label>
+      <ion-datetime min="2018" doneText="אישור" cancelText="ביטול" displayFormat="DD/MM/YYYY HH:mm" type="datetime" name="begin" formControlName="date_begin"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating >  <ion-icon name="calendar" item-start class="text-primary"></ion-icon>תאריך סיום טיול</ion-label>
+      <ion-datetime min="2018" doneText="אישור" cancelText="ביטול" displayFormat="DD/MM/YYYY HH:mm" type="datetime" name="end" formControlName="date_end" ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label >  מצטרף לטיול</ion-label>
+        <ion-checkbox placeholder="מצטרף לטיול" name="come" formControlName="come_trip" > האם אתה מצטרף לטיול</ion-checkbox>
+    </ion-item>
+    
+    <button ion-button full icon-start color="dark" type="submit" [disabled]="!validations_form.valid"><ion-icon name="add-circle"></ion-icon>אישור</button>
+    </form>
+</ion-content>

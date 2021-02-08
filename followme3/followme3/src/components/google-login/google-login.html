@@ -1,0 +1,16 @@
+<!-- Generated template for the OtherLoginComponent component -->
+<!-- <div *ngIf="(user | async) || {} as user">
+  <button ion-button full color="danger" icon-left *ngIf="!user.uid" (tap)="googleLogin()">
+<ion-icon name="logo-googleplus"></ion-icon> Login with google
+</button>
+
+  <div *ngIf="user.uid">Logged In
+    <button ion-button (tap)="signOut()">Sign Out</button>
+  </div> 
+</div> -->
+
+      <button ion-button icon-only block class="btn-gplus"  (tap)="googleLogin()" *ngIf="(user | async) || {} as user">
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </button>
+ 
+  

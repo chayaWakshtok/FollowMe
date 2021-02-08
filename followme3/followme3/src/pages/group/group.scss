@@ -1,0 +1,13 @@
+page-group {
+    [icon-left] ion-icon, [icon-start] ion-icon {
+        font-size: 1.4em;
+        line-height: 1 !important;
+        pointer-events: none;
+        padding-left: 0.3em;
+    }
+    ion-icon {
+        
+        line-height: 1.2 !important;
+       
+    }
+}

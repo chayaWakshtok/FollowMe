@@ -1,0 +1,102 @@
+<!--
+  Generated template for the GroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>קבוצות </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list-header>
+      <h1 style="color:#050322">   קבוצות שאתה רשום כמטייל </h1> 
+    </ion-list-header>
+   
+    <ion-list *ngIf="groups.length==0&&groupDisable.length==0">
+       <ion-item >
+        <p>אתה לא רשום לשום קבוצה כמטייל</p>
+      </ion-item>
+    </ion-list>
+
+
+  <ion-list *ngIf="groups">
+    <ion-item *ngFor="let group of groups" (click)="openHome(group)">
+      <h2 style="color:#d63d00"> {{group.Name}}</h2>
+      <p style="color:#050322"> {{ group.Description}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="groupDisable">
+    <ion-item *ngFor="let group of groupDisable">
+      <h2 style="color: grey">{{group.Name}}</h2>
+      <p style="color: grey">{{ group.Description}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list-header>
+    <h1 style="color:#050322"> קבוצות בהם אתה מנהל</h1>
+    </ion-list-header>
+
+    <ion-list *ngIf="managmentGroup.length==0&&managmentGroupDisable.length==0">
+      <ion-item >
+       <p>אתה לא רשום לשום קבוצה כמנהל  טיול</p>
+     </ion-item>
+   </ion-list>
+
+  <ion-list *ngIf="managmentGroup">
+    <ion-item-sliding *ngFor="let groupManagment of managmentGroup">
+      <ion-item (click)="openHomeManagment(groupManagment)" >
+        <h2 style="color:#d63d00"> {{groupManagment.Name}}</h2>
+        <p style="color:#050322"> {{ groupManagment.Description}}</p>
+      </ion-item>
+
+      <ion-item-options>
+        <button ion-button color="light"  (click)="settingGroup(groupManagment)">
+          <ion-icon name="settings" ></ion-icon>
+         הגדרות
+        </button>
+        <button ion-button color="primary"  (click)="deleteGroup(groupManagment)">
+          <ion-icon name="trash" ></ion-icon>
+          מחק
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list *ngIf="managmentGroupDisable">
+      <ion-item-sliding *ngFor="let groupManagment of managmentGroupDisable">
+    <ion-item >
+      <div class="input-wrapper" >
+        <h2 style="color:grey">{{groupManagment.Name}}</h2>
+        <p style="color:grey">{{ groupManagment.Description}}</p>
+       </div>
+    </ion-item>
+       <ion-item-options>
+        <button ion-button color="light"  (click)="settingGroup(groupManagment)">
+          <ion-icon name="settings" ></ion-icon>
+         הגדרות
+        </button>
+        <button ion-button color="primary"  (click)="deleteGroup(groupManagment)">
+          <ion-icon name="trash" ></ion-icon>
+          מחק
+        </button>
+      </ion-item-options>
+      
+    </ion-item-sliding>
+  </ion-list>
+  <button ion-button icon-start color="dark" (click)="addGroup()">
+    <ion-icon name="person-add"></ion-icon>
+    הוספת קבוצה
+  </button>
+  <button ion-button icon-start color="dark" (click)="addToGroup()">
+    <ion-icon name="person-add"></ion-icon>
+     הצטרפות לקבוצה קימת
+  </button>
+</ion-content>

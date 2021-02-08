@@ -1,0 +1,25 @@
+<!--
+  Generated template for the EnterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="energized">
+    <ion-title>אישור הרשמה</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #templForm="ngForm" name="formEnter" color="dark">
+<p>
+כדי להיכנס לאפליקציה 
+עליך לאשר שאתה מודע לכך ששאר המטיילים שרשומים לאפליקציה שלך יוכלו לראות את מיקומך, וכן המנהלים יוכלו לראות גם את פרטיך המורחבים
+</p>
+<ion-checkbox  required [(ngModel)]="checkbox2" name="checkbox2" color="warning" #gen="ngModel" ><span>מסכימה לתנאי ההרשמה</span>  </ion-checkbox>
+<button  (click)="moveRegister()" name="button" [disabled]="templForm.invalid">כניסה</button>
+</form>
+</ion-content>

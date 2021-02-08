@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QualiAPI.Models.DefinitionGroup">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DefinitionGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Models.DefinitionUser">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DefinitionUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Models.Group">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACACAEAMAgAQAAAAAgAAQAAIQIAAACAAAAAACAAAA=</HashCode>
+      <FileName>Models\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.Histories">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Histories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.ManagmentInGroup">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\ManagmentInGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Models.Marker">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Marker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.MessageGroup">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MessageGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.MessageUser">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Models\MessageUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.UserInGroup">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserInGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QualiAPI.Models.UserProfile">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAEAEACAAAAAAAAAAAQAAAAAAABAAAAAAIAAAAAg=</HashCode>
+      <FileName>Models\UserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.conectDB">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAQAAAAAFAAAAASCAAAEEAVACAAUEAAAAJBAIAEQ=</HashCode>
+      <FileName>conectDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DAL.Models.WhenStatusOpen">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

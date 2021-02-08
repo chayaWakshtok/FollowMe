@@ -1,0 +1,48 @@
+<!--
+  Generated template for the MapUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{user.FirstName}}  {{user.LastName}} פרטי מטייל</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card style="margin-top: 97px;">
+
+    <ion-fab right top style="top: 98px;">
+        <button ion-fab>
+          <ion-icon name="md-create"></ion-icon>
+        </button>
+      </ion-fab>
+ 
+  <ion-item *ngIf="user">
+    <ion-avatar item-start >
+      <img style="margin-top: 38px;" *ngIf="user.Image" [src]="user.Image"> 
+      <img *ngIf="!user.Image" style="margin-top: 38px;" src="../../assets/imgs/avatar.jpg"> 
+    </ion-avatar>
+    <h2 style="margin-top: 42px;color: #263d49">{{user.FirstName}}  {{user.LastName}}</h2>
+    <p style="color: #263d49">{{user.Email}}</p>
+    
+  </ion-item>
+
+  <ion-card-content>
+    <h3>  מיקום המטייל:  </h3>
+    <p *ngIf="info">{{currentAdressPlace}} </p>
+    <h3> המרחק הקרוב ביותר למנהל הקבוצה שפעיל</h3>
+    <p *ngIf="info">{{info["distanceLessManagment"]}} </p>
+    <h3> זמן מרחק עד אליך </h3>
+    <p *ngIf="info">{{info["distanceLessManagment"]}} </p>
+
+  </ion-card-content> 
+
+ <button ion-button full color="dark" (click)="editUser()"> שלח הודעה</button>
+</ion-card>
+
+</ion-content>

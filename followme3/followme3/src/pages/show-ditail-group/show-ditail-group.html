@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ShowDitailGroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>פרטי קבוצת {{nameGroup}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form class="form" #form="ngForm" >
+
+        <ion-item>
+            <ion-label  color="primary">כיבוי/הדלקת הקבוצה </ion-label>
+            <ion-toggle name="status"  class="form-controll" [(ngModel)]="status">כיבוי/הדלקת הקבוצה</ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating color="primary">מרחק התראה</ion-label>
+            <ion-input type="number" name="distance"  class="form-controll"  [(ngModel)]="group.DefinitionGroup.Distance"></ion-input>
+          </ion-item>
+    
+      
+          <ion-item>
+              <ion-label floating color="primary">הפעלת הקבוצה</ion-label>
+              <ion-select name="open" [(ngModel)]="whenOpen" cancelText="ביטול" okText="אישור">
+                  <ion-option value="0" [attr.selected]="(form.name == name) ? true : null">ידנית</ion-option>
+                  <ion-option value="1">אוטמטית</ion-option>
+              </ion-select>
+            </ion-item>
+            <button ion-button color="dark" (click)="updateUsers()"> עדכון מטיילים  </button>
+            <button ion-button color="dark" (click)="updateManagments()"> עדכון מנהלים </button>
+      <button ion-button color="dark" class="submit-btn" full type="submit" (click)="saveChangeDitailsGroup()"> שמור </button>
+      
+      </form>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-menu [content]="content" *ngIf="userService.getPhoneUser()" type="overlay">
+  <ion-header>
+    <ion-toolbar class="user-profile">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <div class="user-avatar">
+              <img *ngIf="image" [src]="image" width="50px" height="50px">
+              <img *ngIf="!image" src="../assets/imgs/avatar.jpg" width="50px" height="50px">
+            </div>
+          </ion-col>
+          <ion-col col-8>
+            <h2 ion-text class="no-margin bold text-white" color="secondary">
+              {{nameUser}}
+            </h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h5 *ngIf="nameGroup" class="text-h5"> מחובר לקבוצת  {{nameGroup}}</h5>
+            <h5 *ngIf="!nameGroup" class="text-h5">אתה לא מחובר לשום קבוצה</h5>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="primary">
+    <ion-list class="user-list">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon item-left name="{{p.icon}}" color="primary"></ion-icon>
+        <span ion-text color="primary">{{p.title}}</span>
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" dir="rtl" #content swipeBackEnabled="false"></ion-nav>
